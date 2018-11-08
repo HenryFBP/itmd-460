@@ -150,25 +150,39 @@
                     <p>Sound Effect 1</p>
                     <p><a href="{{ url_for('static', filename='audio/soundeffect1.mmpz') }}">
                         LMMS file</a></p>
-                    <audio controls
-                           src="{{ url_for('static', filename='audio/soundeffect1.wav' )}}"></audio>
+                    <audio controls src="{{ url_for('static', filename='audio/soundeffect1.wav' )}}"></audio>
                 </li>
                 <li>
-                    <p>Sound Effect 2a and 2b</p>
+                    <p>Sound Effect 2a and 2b (same settings file)</p>
                     <p><a href="{{ url_for('static', filename='audio/soundeffect2.dexed') }}">
                         DEXED settings file</a></p>
                     <ul>
                         <li>
                             <p>Sound Effect 2a</p>
-                            <audio controls
-                                   src="{{ url_for('static', filename='audio/soundeffect2-a.wav' )}}"></audio>
+                            <audio controls src="{{ url_for('static', filename='audio/soundeffect2-a.wav' )}}"></audio>
                         </li>
                         <li>
                             <p>Sound Effect 2b</p>
-                            <audio controls
-                                   src="{{ url_for('static', filename='audio/soundeffect2-b.wav' )}}"></audio>
+                            <audio controls src="{{ url_for('static', filename='audio/soundeffect2-b.wav' )}}"></audio>
                         </li>
                     </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>Songs/soundtracks</h3>
+            <ul>
+                <li>
+                    <p>Definitely not a Metroid song, by HenryFBP</p>
+                    <p><a href="{{ url_for('static', filename='audio/soundtrack1.mmpz') }}">
+                        LMMS file</a></p>
+                    <audio controls src="{{ url_for('static', filename='audio/soundtrack1.wav') }}"></audio>
+                </li>
+                <li>
+                    <p>Definitely not a Castlevania song, by HenryFBP</p>
+                    <p><a href="{{ url_for('static', filename='audio/soundtrack2.mmpz') }}">
+                        LMMS file</a></p>
+                    <audio controls src="{{ url_for('static', filename='audio/soundtrack2.wav') }}"></audio>
                 </li>
             </ul>
         </li>

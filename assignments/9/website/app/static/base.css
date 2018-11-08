@@ -39,10 +39,10 @@ h2 {
   line-height: 1.032em; /* 33 / 31.984 = 1.032 */
   padding-bottom: 0.325em;
 }
+
 h3 {
   font-weight: bold;
 }
-
 
 ol, ul {
   padding-bottom: 0.611em; /* 11 / 18 = 0.61~ */
@@ -79,7 +79,7 @@ li li:last-child {
   padding-bottom: 0;
 }
 
-section {
+section, aside {
     padding: 0.611em;
 }
 
