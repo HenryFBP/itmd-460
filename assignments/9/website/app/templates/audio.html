@@ -135,10 +135,43 @@
 
 <section>
     <h2>Audio I am to blame for</h2>
-    <ul>
-        <audio src="">
 
-        </audio>
+    <ul>
+        <li>
+            <h3>Songs</h3>
+            <ul>
+
+            </ul>
+        </li>
+        <li>
+            <h3>Sound effects</h3>
+            <ul>
+                <li>
+                    <p>Sound Effect 1</p>
+                    <p><a href="{{ url_for('static', filename='audio/soundeffect1.mmpz') }}">
+                        LMMS file</a></p>
+                    <audio controls
+                           src="{{ url_for('static', filename='audio/soundeffect1.wav' )}}"></audio>
+                </li>
+                <li>
+                    <p>Sound Effect 2a and 2b</p>
+                    <p><a href="{{ url_for('static', filename='audio/soundeffect2.dexed') }}">
+                        DEXED settings file</a></p>
+                    <ul>
+                        <li>
+                            <p>Sound Effect 2a</p>
+                            <audio controls
+                                   src="{{ url_for('static', filename='audio/soundeffect2-a.wav' )}}"></audio>
+                        </li>
+                        <li>
+                            <p>Sound Effect 2b</p>
+                            <audio controls
+                                   src="{{ url_for('static', filename='audio/soundeffect2-b.wav' )}}"></audio>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
     </ul>
 </section>
 {% endblock %}
