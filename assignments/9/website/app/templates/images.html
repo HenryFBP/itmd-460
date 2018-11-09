@@ -1,11 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>
-    Images
-</h1>
+    <h1>
+        Images
+    </h1>
 
-<section>
-    <p>This page showcases some images I like, and some I've produced.</p>
-</section>
+    <section>
+        <p>This page showcases some images I like, and some I've produced.</p>
+    </section>
+
+    <section>
+        <h2>Images I like</h2>
+        <section class="images">
+            <img src="{{ url_for('static', filename='media/animals/croc1.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/animals/croc2.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/animals/gecko.webp') }}"/>
+            <img src="{{ url_for('static', filename='media/animals/komodo.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/animals/lizard.jpg') }}"/>
+        </section>
+
+        <h2>Images I've made</h2>
+        <section class="images">
+            <img src="{{ url_for('static', filename='media/mine/slug.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/scuba.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/bread.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/cookies.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie0.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie1.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie2.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie3.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie4.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie5.jpg') }}"/>
+            <img src="{{ url_for('static', filename='media/mine/pie6.jpg') }}"/>
+        </section>
+    </section>
 {% endblock %}
