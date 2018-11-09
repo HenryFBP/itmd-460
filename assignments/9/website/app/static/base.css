@@ -83,6 +83,10 @@ section, aside {
     padding: 0.611em;
 }
 
+.videos {
+    display: inline-block;
+}
+
 .genre ul li {
     list-style-type: none;
 }
