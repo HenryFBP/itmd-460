@@ -1,0 +1,53 @@
+nav li {
+  width: 100%;
+  float: left;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    text-underline-position: under;
+    line-height: 4rem;
+    font-family: 'Cousine', monospace;
+}
+
+nav a:hover {
+  background-color: #ff98ff;
+}
+
+nav {
+  /* width: 100%; */
+  /* top: 0; */
+  /* left: 0; */
+}
+
+
+html {
+    background-color: pink;
+}
+
+@media screen and (min-width: 400px) {
+nav {
+  display: table;
+}
+
+nav ul {
+  display: table-row;
+}
+
+nav li {
+  display: table-cell;
+  float: none;
+  width: 1%;
+}
+}
