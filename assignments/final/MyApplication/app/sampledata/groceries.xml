@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<fridge>
+    <shelf number="0"> <!-- Shelf 0 got some eggs and cheese.-->
+
+        <eggs amount="3" /> <!-- One way to describe an amount of something.-->
+
+        <cheese attributes="moldy" smell="smelly">
+            <amount> <!-- Another way to describe an amount of something. -->
+                1 lb
+            </amount>
+        </cheese>
+
+    </shelf>
+    <shelf number="1" /> <!--   Shelf 1 is empty. Sad :(
+                                Note the self-closing tag here.
+                                We don't -have- to do this, but it saves space.-->
+
+    <shelf number="2">
+        <!-- Shelf 2 is also empty, but we don't use a self-closing tag. -->
+    </shelf>
+</fridge>

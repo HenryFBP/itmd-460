@@ -1,0 +1,35 @@
+<ground>
+    <tree>
+        <branch>
+            <leaf>
+                <item>some bug</item>
+            </leaf>
+
+            <leaf />
+            <leaf />
+
+            <leaf>
+                <item>some water</item>
+                <item>more water</item>
+            </leaf>
+        </branch>
+
+        <branch />
+
+        <branch>
+            <leaf item="another bug" />
+        </branch>
+    </tree>
+
+    <tree /> <!-- sad dead tree :( -->
+
+    <tree>
+        <branch>
+            <leaf />
+        </branch>
+
+        <branch>
+            <leaf />
+        </branch>
+    </tree>
+</ground>
