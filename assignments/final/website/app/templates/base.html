@@ -4,9 +4,12 @@
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='prism.css') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+
+    <script src="{{ url_for('static', filename='prism.js') }}"></script>
 
     <title>
         {% block title %}
