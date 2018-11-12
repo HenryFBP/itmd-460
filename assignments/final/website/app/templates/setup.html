@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Setting up Android Studio</h1>
+
+<aside>
+    <p>I have also made a video version of this page, and it is shown below.</p>
+    <p><a href="https://www.youtube.com/watch?v=1iN8voA_oy8">Here</a>
+        is a link to it on YouTube.</p>
+
+    <iframe src="https://www.youtube-nocookie.com/embed/1iN8voA_oy8" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</aside>
+
+<section id="toc">
+    <h2>TOC</h2>
+    <ul>
+        <li>
+            <a href="#prereqs">Pre-requisites</a>
+        </li>
+    </ul>
+</section>
+
+<section id="prereqs">
+    <h2>Pre-requisites</h2>
+    <ul>
+        <li>
+            <h3>Human requirements</h3>
+            <ul>
+                <li>Use a mouse, keyboard, or other human interface device</li>
+                <li>Navigate your filesystem</li>
+                <li>Navigate websites</li>
+                <li>Click on dialogue boxes</li>
+                <li>Understand and navigate user interfaces on your screen</li>
+                <li>Perform respiration</li>
+                <li>Be conscious</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Hardware requirements</h3>
+            <ol>
+                <li><p>You need a laptop, preferably with 4 Gigabytes or more of RAM.</p>
+                    <p>It can be running Windows, OSX, or Linux.</p>
+                </li>
+                <li>You need one two things to run the apps you’ll make:
+                    <ul>
+                        <li>An Android phone, or</li>
+                        <li>Virtualization and VT-x features to be enabled on your processor. These are
+                            features that not all processors have. I will go over how to check that later.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ul>
+    <p>Once you’ve got your laptop in front of you, you’re ready for the next step.</p>
+</section>
+
+<section id="installing">
+    <ol>
+        <li><p>Navigate to <a href="https://developer.android.com/studio/ ">https://developer.android.com/studio/</a>
+            using your web browser.</p></li>
+        <li>Click on “Download Android Studio”.
+            It’s about 1GB, so it might take a bit. I downloaded this before-hand to save myself some editing.
+        </li>
+        <li>Accept the license agreement.</li>
+        <li>Execute the file that you just downloaded.</li>
+        <li>a. Don’t forget to sharpen your guillotine for this part.</li>
+        <li><p>Click on ‘Next’ for all the prompts.</p>
+            <p>Now we wait.</p></li>
+        <li>5. Now that it’s done installing, you can click ‘Finish’.
+            <p>This will open Android Studio’s setup wizard.</p></li>
+        <li>6. If you’re asked to import settings, just select ‘Do not import settings’ and click OK.</li>
+        <li>7. The setup wizard will ask you how you want to configure settings. This is up to you, but you can use
+            ‘Standard’.
+        </li>
+        <li>8. More downloading! (This step is likely downloading the source code of libraries you will use to develop
+            apps with so that proper syntax highlighting and IntelliSense can work, among other things.)
+        </li>
+        <li>a. This step is also installing an android emulator and Intel HAXM, a virtualization engine that makes
+            emulating Android devices much faster.
+        </li>
+        <li>9. You’re done with the setup steps!
+            <p>Before you is the ‘Welcome Screen’.</p>
+
+    </ol>
+</section>
+{% endblock %}
