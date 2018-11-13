@@ -2,19 +2,19 @@
 <html>
 <head>
     {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='prism.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='prism.css') }}">
 
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
 
-    <script src="{{ url_for('static', filename='prism.js') }}"></script>
+        <script src="{{ url_for('static', filename='prism.js') }}"></script>
 
-    <title>
-        {% block title %}
-        {% endblock %}
-    </title>
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
     {% endblock %}
 </head>
 <body>
@@ -26,8 +26,7 @@
 </section>
 <section id="footer">
     {% block footer %}
-
-    <p>&copy; Copyright 20XX by <a href="http://henryfbp.me/">Bofa Industries</a>.</p>
+        <p>&copy; Copyright 20XX by <a href="http://henryfbp.me/">Bofa Industries</a>.</p>
     {% endblock %}
 </section>
 
