@@ -9,6 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html {
     font-size: 1.125em; /* 18px / 16pt = 1.125 */
     line-height: 1.222em; /* 22pt / 18em = 1.2~ */
+    background-color: pink;
 }
 
 a:active {

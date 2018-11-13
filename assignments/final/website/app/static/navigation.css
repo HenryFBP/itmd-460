@@ -1,4 +1,5 @@
 nav li {
+    background: floralwhite;
     width: 100%;
     float: left;
     padding: 0;
@@ -22,17 +23,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ff98ff;
+    background-color: aliceblue;
 }
 
 nav {
     /* width: 100%; */
     /* top: 0; */
     /* left: 0; */
-}
-
-html {
-    background-color: pink;
 }
 
 @media screen and (min-width: 400px) {
