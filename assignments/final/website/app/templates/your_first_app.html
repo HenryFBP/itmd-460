@@ -17,10 +17,12 @@
     <section>
         <ol>
             <li><p>Click on "Start a new Android Studio Project".</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/1.PNG') }}">
                 <ol>
                     <li><p>Unless you want Kotlin support (A language that compiles into Java bytecode), uncheck
                         "Include Kotlin Support".</p>
                         <p> If you don't know Kotlin, this step can create moderate problems for you.</p></li>
+                    <img src="{{ url_for('static', filename='media/your_first_app/1a.PNG') }}">
                 </ol>
             </li>
             <li><p>Click on Next. Now you can select API versions.</p>
@@ -31,11 +33,14 @@
                 <p>A lower API version means your app will be able to run on more devices, but must use older
                     libraries.</p>
                 <p>A higher API version means your app will be able to run on less devices, but can use new
-                    features.</p></li>
+                    features.</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/2.PNG') }}"></li>
             <li><p>Click on Next. This is a handy screen that lets you select what your first app's screen will look
                 like.</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/3a.PNG') }}">
                 <p>For us, let's do 'Empty Activity'.</p>
-                <p>Click on Finish, and wait.</p></li>
+                <p>Click on Finish, and wait.</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/3b.PNG') }}"></li>
             <li><p>Before we edit anything, I want to just run our app.</p>
                 <ol>
                     <li><p>However, before we do this, we need to set up an "Android Virtual Device".</p>
@@ -45,12 +50,15 @@
                 </ol>
             </li>
             <li><p>Go to Tools &gt; AVD Manager &gt; Create Virtual Device</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/5.PNG') }}">
                 <ol>
                     <li><p>You can select the hardware profile of the device.</p>
                         <p>This will determine its screen size, (lack of) cameras, and other hardware stuff.</p>
                         <p>This doesn't really matter, as most Android apps work on all scales, if made properly.</p>
+                        <img src="{{ url_for('static', filename='media/your_first_app/5a.PNG') }}">
                     </li>
-                    <li><p>Let's use a Nexus 5X because 'Why Not&trade;'?</p></li>
+                    <li><p>Let's use a Nexus 5X because 'Why Not&trade;'?</p>
+                        <img src="{{ url_for('static', filename='media/your_first_app/5b.PNG') }}"></li>
                     <li><p>Next, you'll need to select a 'system image'. This is where those processor
                         features are actually important.</p>
                         <ol>
@@ -59,14 +67,18 @@
                             <li><p>If you DON'T have virtualization or VT-x, you can use an arm64 or armeabi image, but
                                 they will be very slow.</p></li>
                         </ol>
+                        <img src="{{ url_for('static', filename='media/your_first_app/5c.PNG') }}">
                     </li>
                     <li><p>I will use API 28. Also, more downloading.</p></li>
                 </ol>
             </li>
             <li><p>Once the download is finished, select the downloaded system image and click 'Next', and then click
-                'Finish'.</p></li>
+                'Finish'.</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/6.PNG') }}"></li>
             <li><p>Click the green 'Run' button in the upper-right, or do 'Shift-F10'.</p>
-                <p>YAY! It works!</p></li>
+                <img src="{{ url_for('static', filename='media/your_first_app/7.PNG') }}">
+                <p>YAY! It works!</p>
+                <img src="{{ url_for('static', filename='media/your_first_app/WOOHOO.PNG') }}"></li>
         </ol>
     </section>
 {% endblock %}
