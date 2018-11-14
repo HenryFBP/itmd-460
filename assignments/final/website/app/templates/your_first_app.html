@@ -16,12 +16,10 @@
 
     <section>
         <ol>
-            <li>
-                <p>Click on "Start a new Android Studio Project".</p>
+            <li><p>Click on "Start a new Android Studio Project".</p>
                 <ol>
                     <li><p>Unless you want Kotlin support (A language that compiles into Java bytecode), uncheck
-                        "Include
-                        Kotlin Support".</p>
+                        "Include Kotlin Support".</p>
                         <p> If you don't know Kotlin, this step can create moderate problems for you.</p></li>
                 </ol>
             </li>
@@ -33,13 +31,12 @@
                 <p>A lower API version means your app will be able to run on more devices, but must use older
                     libraries.</p>
                 <p>A higher API version means your app will be able to run on less devices, but can use new
-                    features.</p>
-            </li>
+                    features.</p></li>
             <li><p>Click on Next. This is a handy screen that lets you select what your first app's screen will look
                 like.</p>
                 <p>For us, let's do 'Empty Activity'.</p>
                 <p>Click on Finish, and wait.</p></li>
-            <li>Before we edit anything, I want to just run our app.
+            <li><p>Before we edit anything, I want to just run our app.</p>
                 <ol>
                     <li><p>However, before we do this, we need to set up an "Android Virtual Device".</p>
                         <p>This is so that we can run it without needing an Android phone.</p>
@@ -47,7 +44,7 @@
                         <p>If you want to know how to do this, Google "Android Debugging Bridge".</p></li>
                 </ol>
             </li>
-            <li>Go to Tools &gt; AVD Manager &gt; Create Virtual Device
+            <li><p>Go to Tools &gt; AVD Manager &gt; Create Virtual Device</p>
                 <ol>
                     <li><p>You can select the hardware profile of the device.</p>
                         <p>This will determine its screen size, (lack of) cameras, and other hardware stuff.</p>
@@ -58,25 +55,18 @@
                         features are actually important.</p>
                         <ol>
                             <li><p>If the architecture of the system image is x86 or x86_64, then you need VT-x enabled
-                                on
-                                your processor to run it. Virtualization is a prerequisite for VT-x.</p></li>
+                                on your processor to run it. Virtualization is a prerequisite for VT-x.</p></li>
                             <li><p>If you DON'T have virtualization or VT-x, you can use an arm64 or armeabi image, but
                                 they will be very slow.</p></li>
                         </ol>
                     </li>
+                    <li><p>I will use API 28. Also, more downloading.</p></li>
                 </ol>
             </li>
-        </ol>
-        <ul>
-            <li>I will use API 28. Also, more downloading.</li>
-        </ul>
-        <ol>
-            <li>Once the download is finished, select the downloaded system image and click 'Next'.</li>
-            <li>Click 'Finish'.</li>
-        </ol>
-        <ol start="6">
-            <li>Click the green 'Run' button in the upper-right, or do 'Shift-F10'.</li>
-            <li>YAY! It works!</li>
+            <li><p>Once the download is finished, select the downloaded system image and click 'Next', and then click
+                'Finish'.</p></li>
+            <li><p>Click the green 'Run' button in the upper-right, or do 'Shift-F10'.</p>
+                <p>YAY! It works!</p></li>
         </ol>
     </section>
 {% endblock %}
