@@ -17,3 +17,8 @@ def setup():
 @app.route('/your_first_app')
 def your_first_app():
     return render_template('your_first_app.html')
+
+
+@app.route('/coding_primer')
+def coding_primer():
+    return render_template('coding_primer.html')
