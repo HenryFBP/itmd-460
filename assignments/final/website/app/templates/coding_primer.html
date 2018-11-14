@@ -1,13 +1,123 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Coding Primer: XML and Java</h1>
+    <h1>Coding Primer: XML and Java</h1>
 
-<aside>
-    <pre><code class="language-xml line-numbers">&lt;!-- TODO you lazy slug-man MAKE THE CODING VIDEO! --></code></pre>
-</aside>
+    <aside>
+        <p>I have also made two video versions of this page, and they are shown below.</p>
 
-<section>
+        <ul>
+            <li>
+                <h2>Java crash course</h2>
+                <p><a href="https://www.youtube.com/watch?v=X6z7jwdgAi4">Here</a>
+                    is a link to it on YouTube.</p>
 
-</section>
+                <iframe class="video" src="https://www.youtube-nocookie.com/embed/X6z7jwdgAi4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </li>
+        </ul>
+    </aside>
+
+    <section id="toc">
+        <h2>TOC</h2>
+        <ul>
+            <li><a href="#javacrashcourse">Java crash course</a></li>
+            <li><a href="#xmlcrashcourse">XML crash course</a></li>
+        </ul>
+    </section>
+
+    <section id="javacrashcourse">
+        <h2>Java crash course</h2>
+
+        <section>
+            <h3>What is Java?</h3>
+
+            <p>Java is a very popular programming language used in quite a lot of places.</p>
+            <p>Java has quite a few nice features, such as:</p>
+            <ul>
+                <li><p>Portability due to the JVM interpreting Java bytecode, and the JVM which is on nearly every
+                    platform (Ever notice you don't need to recompile Java programs for different platforms, OSes,
+                    or processors?)</p>
+                    <ul>
+                        <li><p>Note: The thing that is different across platforms is the JVM itself. This step always
+                            has to exist, as long as processors and OSes contain fundamental differences from
+                            eachother.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li><p>Concurrency (Multiple things at once, using <code class="language-java">synchronized</code></p>
+
+                </li>
+                <li><p>Structured programming (<code class="language-java">for</code> loops, <code
+                        class="language-java">if</code> statements)</p></li>
+                <li><p>Functional programming (only Java 8 and up, <code class="language-java">lambda</code>s)</p></li>
+                <li><p>Object Orientation, i.e. inheritance child/parent relationships</p></li>
+                <li><p>Abstraction (interfaces, abstract classes)</p></li>
+            </ul>
+            <p>To name a few.</p>
+            <p>Also, memory management is done for you via a garbage collection system. No <code class="language-clike">malloc()</code>
+                or <code class="language-clike">free()</code> here.</p>
+
+            <p>It is also statically typed, meaning that the types of all variables are inferred upon compilation.</p>
+            <p>To sum up Java’s static typing, the code below will produce a compilation error:</p>
+
+            <pre class="language-java"><code>String x = "Hello";
+x = 3; //I'm a bad line of code ;)</code></pre>
+
+            <p>However, you can assign types to variables freely in other languages. This feature is both a pro and a
+                con, as most features end up being.</p>
+
+
+        </section>
+
+        <section><h3>What does the Java language look like?</h3>
+            <p>The Java language looks somewhat C-like, as it is whitespace-insensitive, and enjoys semicolons and curly
+                braces.</p>
+            <p>Below is the definition of very simple Java <strong>function</strong> that takes a number as an argument,
+                and returns a number back to you.</p>
+            <p>If the number is over 20, you get returned the number you put in, plus 200. Otherwise, you will get
+                20.</p>
+
+            <pre class="language-java"><code>public Integer stuff(Integer argument) {
+
+    if (argument >= 20) {
+        return (argument + 200);
+    }
+
+    String msg = "Hello there!";
+
+    if (msg.contains("the")) {
+        return 20;
+    } else {
+        return -1;
+    }
+}</code></pre>
+
+            <p>If you prefer mathematical notation, the following formula describes it too:</p>
+
+            <p>$$ stuff(x) = \left\{\begin{matrix}
+                x + 200 & x \ge 20 \\
+                20 & x < 20
+                \end{matrix}\right. $$</p>
+
+            <p>All the words in <strong>blue</strong> are reserved syntax elements that do specific things in Java. You
+                can generally name your variables anything you want.</p>
+            <p>The 'types' in this code snippet are 'String' and 'Integer'.</p>
+            <p>Objects can have 'functions' that operate on their data, and these functions are called
+                'methods'.</p>
+            <p>Relating this code to real life, we could say that a car has a 'drive' method, and you have
+                an 'eat' method.</p>
+            <p>I used the <code class="language-java">String.contains(&hellip;)</code> method to demonstrate this
+                principle.</p>
+            <p>If we wanted to print the value 220 to the console, we could write the following:</p>
+
+            <pre><code class="language-java">System.out.println(stuff(20));</code></pre>
+
+            <p>You can see that invoking the function is as easy as putting its name, plus a value wrapped inside
+                it.</p>
+            <p>We say we have 'called' the stuff function with the argument 20.</p>
+        </section>
+
+    </section>
 {% endblock %}

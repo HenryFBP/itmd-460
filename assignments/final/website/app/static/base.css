@@ -86,6 +86,12 @@ section, aside {
 
 img {
     max-width: -webkit-fill-available;
+    height: auto;
+}
+
+.video {
+    width: 50vw;
+    height: 33vw;
 }
 
 .videos {

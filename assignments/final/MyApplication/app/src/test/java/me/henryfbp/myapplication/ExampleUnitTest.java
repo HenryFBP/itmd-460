@@ -18,7 +18,7 @@ public class ExampleUnitTest {
     }
 
     // Example of simple Java syntax. Used in 'Java crash course'.
-    public java.lang.Integer stuff(Integer argument) {
+    public Integer stuff(Integer argument) {
 
         if (argument >= 20) {
             return (argument + 200);
@@ -31,5 +31,15 @@ public class ExampleUnitTest {
         } else {
             return -1;
         }
+    }
+
+//    public void IWillError() {
+//        String x = "hello";
+//        x = 2f;
+//    }
+
+    public void IWillNotError() { // This one is ok. Why do you think it compiles?
+        Object x = "hello";
+        x = 3;
     }
 }
