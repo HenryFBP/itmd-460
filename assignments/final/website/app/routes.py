@@ -22,3 +22,7 @@ def your_first_app():
 @app.route('/coding_primer')
 def coding_primer():
     return render_template('coding_primer.html')
+
+@app.route('/examining_our_app')
+def examining_our_app():
+    return render_template('examining_our_skeleton_app.html')
