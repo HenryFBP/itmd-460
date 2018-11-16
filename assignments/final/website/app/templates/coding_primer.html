@@ -9,12 +9,20 @@
         <ul>
             <li>
                 <h2>Java crash course</h2>
-                <p><a href="https://www.youtube.com/watch?v=X6z7jwdgAi4">Here</a>
-                    is a link to it on YouTube.</p>
+                <p><a href="https://www.youtube.com/watch?v=X6z7jwdgAi4">Here</a>is a link to it on YouTube.</p>
 
                 <iframe class="video" src="https://www.youtube-nocookie.com/embed/X6z7jwdgAi4" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>XML crash course</h2>
+                <p><a href="hxxps://www.bother.me.please/to?finish=it">Here</a> is a link to it on YouTube.</p>
+
+                <iframe class="video" src="hxxps://www.potato.land.hooray" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
             </li>
         </ul>
     </aside>
@@ -118,5 +126,64 @@ x = 3; //I'm a bad line of code ;)</code></pre>
             <p>We say we have 'called' the stuff function with the argument 20.</p>
         </section>
 
+    </section>
+
+    <section id="xmlcrashcourse">
+        <h2>XML crash course</h2>
+
+        <p>Before I describe activity_main.xml, one of our project's main files, I have to describe what XML is to
+            you.</p>
+        <p>So, XML. It stands for eXtensible Markup Language.</p>
+        <p>This is a <strong>markup language</strong> (as opposed to a programming language) which descends from the
+            same standard that HTML, HyperText Markup Language, does. Their common parent is a standard called SGML,
+            which descended from an ancient standard called GML, and its ancestor, Rock-Based Flint Inscription Markup
+            Language (RBFIML)<a href="#_footnote_1" name="_footnote_ref1">[1]</a>, also known as flint knapping.</p>
+        <p>On a high level, it is a way to annotate a document or piece of data in such a way that the annotations
+            themselves are able to be distinguished from the text.</p>
+        <p>Simply put, it is a system for combining data, metadata, and structure in a way that allows for them to be
+            separated again.</p>
+        <p>Let's look at a very simple snippet of XML that describes a fridge:</p>
+        <pre class="language-java"><code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;fridge&gt;
+    &lt;shelf number="0"&gt; 
+        &lt;eggs amount="3" /&gt; 
+        &lt;cheese attributes="moldy" smell="smelly"&gt; 
+            &lt;amount&gt; 
+                1 lb
+            &lt;/amount&gt;
+        &lt;/cheese&gt;
+
+    &lt;/shelf&gt;
+    &lt;shelf number="1" /&gt; 
+
+    &lt;shelf number="2"&gt;
+        
+    &lt;/shelf&gt;
+&lt;/fridge&gt;</code></pre>
+        <p>This XML snippet describes a fridge with three shelves, and the top shelf has 3 eggs and 1lb of yucky
+            cheese.</p>
+        <p>Some important notes here are:</p>
+        <ul>
+            <li><p>Every opening tag must close.</p></li>
+            <li><p>Tags can have 0 or more attribute-value pairs, as you can see with
+                <code class="language-java">&lt;cheese&gt;</code>.</p>
+                <ul>
+                    <li><p>All attribute values must be enclosed with double quotes.</p></li>
+                </ul>
+            </li>
+            <li><p>All tag and attribute names can NOT have spaces or other <a
+                    href="https://www.w3.org/TR/xml/#NT-element">crazy stuff</a> in them.</p></li>
+            <li><p>A tag can have 0 or more children, as you can see with <code
+                    class="language-java">&lt;fridge&gt;</code>.</p></li>
+            <li><p>If a tag has no children, it can self-close, as you can see with
+                <code class="language-java">&lt;shelf number=&quot;1&quot; /&gt;</code>
+            </p></li>
+            <li><p>There can only be one 'root' tag.</p></li>
+        </ul>
+
+        <aside class="footnotes">
+            <h2>Footnotes</h2>
+            <p><a href="#_footnote_ref1" name="_footnote_1">[1]</a> This is a joke.</p>
+        </aside>
     </section>
 {% endblock %}
