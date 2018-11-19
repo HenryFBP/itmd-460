@@ -5,13 +5,230 @@
 
 <aside>
     <p>I have also made a video version of this page, and it is shown below.</p>
-    <p>This is the same as the first one.</p>
-    <p><a href="https://www.youtube.com/watch?v=1iN8voA_oy8">Here</a> is a link to it on YouTube.</p>
+    <p><a href="hxxps://www.bother.me.please/to?finish=it">Here</a> is a link to it on YouTube.</p>
 
-    <iframe class="video" src="https://www.youtube-nocookie.com/embed/1iN8voA_oy8" frameborder="0"
+    <iframe class="video" src="hxxps://www.potato.land.hooray" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
 </aside>
 
+<section id="preamble">
+    <p>Now that we have an app and a development environment up and running, let’s examine all of the files thoroughly
+        to see how this app actually works.</p>
+</section>
+
+<section id="toc">
+    <h2>TOC</h2>
+    <ul>
+        <li><a href="#MainActivity.java">MainActivity.java</a>
+            <ul>
+                <li><a href="#L1">L1</a></li>
+                <li><a href="#L3:4">L3:4</a></li>
+                <li><a href="#L6">L6</a></li>
+                <li><a href="#L8">L8</a></li>
+                <li><a href="#L9">L9</a></li>
+                <li><a href="#L10">L10</a></li>
+                <li><a href="#L11">L11</a></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="MainActivity.java">
+    <h2>MainActivity.java</h2>
+
+    <p>To get the obvious out of the way, let’s examine the MainActivity class.</p>
+    <p>So, quite a lot in just 13 lines of code.</p>
+
+    <pre class="language-java"><code>package me.henryfbp.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}</code></pre>
+    <p>Breakdown:</p>
+
+    <section id="L1">
+        <h3>L1</h3>
+
+        <pre class="language-java"><code>package me.henryfbp.myapplication;</code></pre>
+
+        <p>This is a package declaration. Generally speaking, packages are ways to segregate your code. If you come from
+            C, C#, or C++, they are Java’s version of namespaces. </p>
+        <p>Like namespaces, they are not strictly necessary, but go a long way in ensuring that conflicts between
+            similar-named source code files.</p>
+        <p>(Can you imagine not being able to use Friend A’s 'CoolThing.java' program because you already made your
+            own? That’s why you use namespa&mdash;er, packages.)</p>
+    </section>
+
+    <section id="L3:4">
+        <h3>L3:4</h3>
+
+        <pre class="language-java"><code>import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;</code></pre>
+
+        <p>These lines import packages defined elsewhere, both made by 'The Android Open Source Project', aka "Those
+            Android geeks!"</p>
+
+        <p>The <code class="language-java">AppCompatActivity</code> class is one which facilitates:</p>
+
+        <ul>
+            <li><p>Sharing bar actions, i.e.:</p>
+                <img style="max-width: 50vw;"
+                     src="{{ url_for('static', filename='media/action_bar.png') }}"></li>
+            <li><p>Sharing actions, i.e. sending a text or an email</p></li>
+        </ul>
+
+        <p>Because of Java’s support for inheritance, this <code class="language-java">AppCompatActivity</code> class
+            can do everything its parent does, and that parent its parent, and so on.</p>
+
+        <p>The below inheritance diagram shows everything that our class inherits from.</p>
+
+        <pre class="language-java"><code>java.lang.Object
+    &rarrhk; android.content.Context
+        &rarrhk; android.content.ContextWrapper
+            &rarrhk; android.view.ContextThemeWrapper
+                &rarrhk; android.app.Activity
+                    &rarrhk; android.support.v4.app.FragmentActivity
+                        &rarrhk; android.support.v7.app.AppCompatActivity</code></pre>
+
+        <p>I’m not going to describe what <code class="language-java">FragmentActivity</code>, <code
+                class="language-java">Activity</code>, <code class="language-java">ContextThemeWrapper</code>, etc. can
+            do, but here’s a list:</p>
+
+        <ul>
+            <li><p>Store the states of temporary UI elements once you close an ‘Activity’ (an app screen)</p></li>
+            <li><p>Load various pieces of data into UI elements</p></li>
+            <li><p>Handle key presses, taps, panning, dragging. ADVANCED FINGER PROCESSING MODULE. (aka a blender)</p>
+            </li>
+            <li><p>Creating and destroying UI elements</p></li>
+            <li><p>Loading images, text, audio, network resources.</p></li>
+            <li><p>Loads more stuff.</p></li>
+        </ul>
+
+        <p>Whew. Done with Line 4. Stay with me, friends.</p>
+
+
+    </section>
+
+    <section id="L6">
+        <h3>L6</h3>
+        <pre class="language-java"><code>public class MainActivity extends AppCompatActivity  {</code></pre>
+
+        <p>We’re declaring a new class on this line, one that can do everything an <code class="language-java">AppCompatActivity</code>
+            can do, but more!</p>
+        <p>This relates to the below lines a bit more and explains <code class="language-java">@Override</code>.</p>
+    </section>
+
+    <section id="L8">
+        <h3>L8</h3>
+
+        <pre><code class="language-java">@Override</code></pre>
+
+        <p><code class="language-java">@Override</code> is what’s called an “annotation” in Java. They are metadata, and
+            do NOT affect the way the code functions (generally).</p>
+
+        <p>This specific annotation is not strictly required, but can help prevent errors and arguably makes the code
+            clearer (or less clear, depending on if you know what it is or not.)</p>
+
+        <p>What does this <code class="language-java">@Override</code> tell us? It tells us that our parent class
+            , <code class="language-java">AppCompatActivity</code>, defines a function that’s also <code
+                    class="language-java">protected</code>, <code class="language-java">return</code>s <code
+                    class="language-java">void</code>, is called <code class="language-java">onCreate</code>, and takes
+            a <code class="language-java">Bundle</code> as an argument, but we want to use ours instead.</p>
+
+        <p>This is because the 'method signature' (its inputs, outputs, name, and level of privacy) is the same as its
+            parent class. </p>
+    </section>
+
+    <section id="L9">
+        <h3>L9</h3>
+
+        <pre class="language-java"><code>protected void onCreate(Bundle savedInstanceState) {</code></pre>
+
+        <p>This is defining a function called <code class="language-java">onCreate</code> that returns nothing, hence
+            the void.</p>
+
+        <p>It takes one argument of type <code class="language-java">Bundle</code>. The name of the argument,
+            <code class="language-java">savedInstanceState</code>, is not important as it is arbitrary and could be
+            anything.</p>
+
+        <p>This <code class="language-java">Bundle</code> object contains whatever data was still left over when we
+            closed, tabbed out of, or turned off
+            our phone’s screen.</p>
+    </section>
+
+    <section id="L10">
+        <h3>L10</h3>
+
+        <pre class="language-java"><code>super.onCreate(savedInstanceState);</code></pre>
+
+        <p>Line 10 is interesting, and it contains a special keyword, '<code class="language-java">super</code>'. You
+            might notice that we’re invoking another <code class="language-java">onCreate</code> function. We’re not
+            calling our <code class="language-java">onCreate</code>, but rather, our parent’s <code
+                    class="language-java">onCreate</code> method.</p>
+
+        <p>Essentially, whatever our parent class is doing with the '<code class="language-java">Bundle
+            savedInstanceState</code>, we want to do as well.</p>
+
+    </section>
+
+    <section id="L11">
+        <h3>L11</h3>
+
+        <pre class="language-java"><code>setContentView(R.layout.activity_main);</code></pre>
+
+        <p>Ah, you thought this single line wouldn't require a page of reading to explain? You were wrong!</p>
+        <p>This method takes some resource, XML or otherwise, that describes a bunch of UI elements, and it populates
+            the current <code class="language-java">Activity</code> with said elements.</p>
+        <p>So, let&rsquo;s begin with <code class="language-java">setContentView</code>. This is a method that belongs
+            to the <code class="language-java">android.app.Activity</code>class. </p>
+
+        <p>This method has three different signatures:</p>
+
+        <ul>
+            <li><p>One that takes an <code class="language-java">int</code></p></li>
+            <li><p>One that takes a <code class="language-java">View</code></p></li>
+            <li><p>One that takes a <code class="language-java">View</code> and <code
+                    class="language-java">LayoutParams</code></p></li>
+        </ul>
+        <p>You might think that <code class="language-java">R.layout.activity_main</code> is a View, but it's actually
+            an int!</p>
+        <p>What the heck? How does an integer describe a bunch of UI elements?</p>
+        <p>Well, not in its entirety, but it is a unique number that is a reference to a resource
+            file. If you come from C, it can be likened to a pointer, or a reference.</p>
+        <p>Whenever you create a new xml file that describes a layout, aapt
+            (<a href="https://developer.android.com/studio/command-line/aapt2">Android Asset Packaging Tool</a>)
+            generates a .java file called 'R.java'. </p>
+        <p>What's in R.java? A bunch of integers! What?!</p>
+
+        <pre class="language-java"><code>public static final int abc_search_dropdown_item_icons_2line=0x7f090018;
+public static final int abc_search_view=0x7f090019;
+public static final int abc_select_dialog_material=0x7f09001a;
+public static final int abc_tooltip=0x7f09001b;
+public static final int activity_main=0x7f09001c;
+public static final int notification_action=0x7f09001d;
+public static final int notification_action_tombstone=0x7f09001e;
+public static final int notification_template_custom_big=0x7f09001f;</code></pre>
+
+        <p>This file is used to allow static references to any resource file (XML, PNG, SVG, etc.) by Java.</p>
+        <p>So, we're taking our activity_main.xml file and populating the UI with the controls that it
+            describes.</p>
+        <p>Next, I'll describe activity_main.xml!</p>
+
+    </section>
+
+</section>
+
+<section id="activity_main.xml">
+    <h2>activity_main.xml</h2>
+</section>
 
 {% endblock %}

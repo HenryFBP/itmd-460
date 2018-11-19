@@ -25,4 +25,4 @@ def coding_primer():
 
 @app.route('/examining_our_app')
 def examining_our_app():
-    return render_template('examining_our_skeleton_app.html')
+    return render_template('examining_our_app.html')
