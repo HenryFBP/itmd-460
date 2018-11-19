@@ -5,12 +5,27 @@
 
 <aside>
     <p>I have also made a video version of this page, and it is shown below.</p>
-    <p><a href="hxxps://www.bother.me.please/to?finish=it">Here</a> is a link to it on YouTube.</p>
 
-    <iframe class="video" src="hxxps://www.potato.land.hooray" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+    <section>
+        <h3>MainActivity.java</h3>
+        <p><a href="hxxps://www.bother.me.please/to?finish=it">Here</a> is a link to it on YouTube.</p>
+
+        <iframe class="video" src="hxxps://www.potato.land.hooray" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <h3>activity_main.xml</h3>
+        <p><a href="hxxps://www.bother.me.please/to?finish=it">Here</a> is a link to it on YouTube.</p>
+
+        <iframe class="video" src="hxxps://www.potato.land.hooray" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </section>
+
 </aside>
+
 
 <section id="preamble">
     <p>Now that we have an app and a development environment up and running, let’s examine all of the files thoroughly
@@ -18,7 +33,7 @@
 </section>
 
 <section id="toc">
-    <h2>TOC</h2>
+    <h2>Table of Contents</h2>
     <ul>
         <li><a href="#MainActivity.java">MainActivity.java</a>
             <ul>
@@ -31,6 +46,7 @@
                 <li><a href="#L11">L11</a></li>
             </ul>
         </li>
+        <li><a href="#activity_main.xml">activity_main.xml</a></li>
     </ul>
 </section>
 
@@ -138,8 +154,8 @@ import android.os.Bundle;</code></pre>
         <p>This specific annotation is not strictly required, but can help prevent errors and arguably makes the code
             clearer (or less clear, depending on if you know what it is or not.)</p>
 
-        <p>What does this <code class="language-java">@Override</code> tell us? It tells us that our parent class
-            , <code class="language-java">AppCompatActivity</code>, defines a function that’s also <code
+        <p>What does this <code class="language-java">@Override</code> tell us? It tells us that our parent class,
+            <code class="language-java">AppCompatActivity</code>, defines a function that’s also <code
                     class="language-java">protected</code>, <code class="language-java">return</code>s <code
                     class="language-java">void</code>, is called <code class="language-java">onCreate</code>, and takes
             a <code class="language-java">Bundle</code> as an argument, but we want to use ours instead.</p>
