@@ -204,7 +204,7 @@ import android.os.Bundle;</code></pre>
         <p>Ah, you thought this single line wouldn't require a page of reading to explain? You were wrong!</p>
         <p>This method takes some resource, XML or otherwise, that describes a bunch of UI elements, and it populates
             the current <code class="language-java">Activity</code> with said elements.</p>
-        <p>So, let&rsquo;s begin with <code class="language-java">setContentView</code>. This is a method that belongs
+        <p>So, let's begin with <code class="language-java">setContentView</code>. This is a method that belongs
             to the <code class="language-java">android.app.Activity</code>class. </p>
 
         <p>This method has three different signatures:</p>
@@ -245,6 +245,60 @@ public static final int notification_template_custom_big=0x7f09001f;</code></pre
 
 <section id="activity_main.xml">
     <h2>activity_main.xml</h2>
+
+    <p>Now that you’re an XML deity blessed with divine knowledge of angle braces and forward slashes, we can examine
+        activity_main.xml with less confusion.</p>
+
+    <pre class="language-xml"><code>&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+&lt;/android.support.constraint.ConstraintLayout>
+</code></pre>
+
+    <p>We have a root element, <code class="language-java">ConstraintLayout</code>. This root element has some
+        attributes that we can talk about, like <code class="language-xml">android:layout_width</code> and <code
+                class="language-xml">android:layout_height</code>.
+        They both have values of <code class="language-java">"match_parent"</code>, which means they should attempt to
+        match their height and width to the container that contains them.</p>
+
+    <p>This is different from, for example, <code class="language-java">"wrap_content"</code>, which attempts to make
+        the UI element as small as possible.</p>
+
+    <p>This element has a single child, a <code class="language-java">TextView</code>. This <code class="language-java">TextView</code>
+        has the <code class="language-java">"wrap_content"</code> <code class="language-xml">android:layout_width</code>
+        and <code class="language-xml">android:layout_height</code> attributes, which explains the below screenshot of
+        the UI:</p>
+
+    <img src="{{ url_for('static', filename='media/layout.png') }}"></li>
+
+    <p> So, the parent container, our <code class="language-java">ConstraintLayout</code> (circled
+        in pink) is making itself as large as ITS parent, which is the screen itself.</p>
+
+    <p>The blue box, our <code class="language-java">TextView</code>, is making itself as small as possible on the X and
+        Y axes due to the <code class="language-java">"wrap_content"</code> attributes.</p>
+
+    <p> Those squiggly blue arrows are due to our four
+        <code class="language-xml">app:layout_constraint&lt;FACEA>_to&lt;FACEB>Of="parent"</code>attribute-value pairs.
+        The top of the <code class="language-java">TextView</code> is constrained to the top of the <code
+                class="language-java">ConstraintLayout</code>, the bottom to the parent’s bottom, and so on.</p>
+
+    <p> And the text <code class="language-java">"Hello World!"</code> comes from our attribute-value pair of
+        <code class="language-xml">android:text="Hello World!"</code>.</p>
 </section>
 
 {% endblock %}
